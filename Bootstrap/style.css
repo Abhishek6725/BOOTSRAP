@@ -1,0 +1,47 @@
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background-color: #343a40; 
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff; /* White text color */
+  }
+  
+  /* About Section */
+  #about {
+    background-color: #f8f9fa; /* Light gray background color */
+    text-align: center;
+    padding: 60px 0;
+  }
+  
+  /* Portfolio Section */
+  #portfolio {
+    text-align: center;
+    padding: 60px 0;
+  }
+  
+  .card {
+    border: none; /* Remove card border */
+  }
+  
+  .card-img-top {
+    height: 200px; /* Adjust height of portfolio images */
+    object-fit: cover;
+  }
+  
+  /* Contact Section */
+  #contact {
+    background-color: #f8f9fa; /* Light gray background color */
+    text-align: center;
+    padding: 60px 0;
+  }
+  

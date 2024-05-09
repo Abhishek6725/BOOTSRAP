@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button Color Change</title>
+  <style>
+    #myButton {
+      background-color: rgb(0, 255, 123);
+      color: rgb(255, 255, 255);
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<button id="myButton" onmouseover="changeColor('red')" onmouseout="changeColor('blue')">CLICK_BUTTON</button>
+
+<script>
+  function changeColor(color) {
+    document.getElementById("myButton").style.backgroundColor = color;
+  }
+</script>
+
+
+
+</body>
+</html>

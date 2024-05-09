@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Populations</title>
+</head>
+<body>
+
+  <script>
+    // JSON data representing a list of countries and their populations
+    const jsonString = `{
+      "countries": [
+        {"name": "China", "population": 1444216107},
+        {"name": "India", "population": 1393409038},
+        {"name": "United States", "population": 332915073},
+        {"name": "Indonesia", "population": 276361783},
+        {"name": "Pakistan", "population": 225199937},
+        {"name": "Brazil", "population": 213993437},
+        {"name": "Nigeria", "population": 211400708},
+        {"name": "Bangladesh", "population": 166303498},
+        {"name": "Russia", "population": 145912025},
+        {"name": "Mexico", "population": 130262216}
+      ]
+    }`;
+
+    // Parsing JSON data into JavaScript object
+    const data = JSON.parse(jsonString);
+    console.log(data);
+  </script>
+
+</body>
+</html>

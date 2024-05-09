@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anagram Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Anagram Checker</h2>
+    <input type="text" id="input1" placeholder="Enter first string">
+    <input type="text" id="input2" placeholder="Enter second string">
+    <button onclick="checkAnagram()">Check Anagram</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function isAnagram(str1, str2) {
+      // Remove spaces and convert to lowercase
+      str1 = str1.replace(/\s/g, '').toLowerCase();
+      str2 = str2.replace(/\s/g, '').toLowerCase();
+      
+      // Check if lengths are different
+      if (str1.length !== str2.length) {
+        return false;
+      }
+      
+      // Sort characters in both strings and compare
+      const sortedStr1 = str1.split('').sort().join('');
+      const sortedStr2 = str2.split('').sort().join('');
+      
+      return sortedStr1 === sortedStr2;
+    }
+
+    function checkAnagram() {
+      const input1 = document.getElementById('input1').value;
+      const input2 = document.getElementById('input2').value;
+      const resultElement = document.getElementById('result');
+
+      if (isAnagram(input1, input2)) {
+        resultElement.textContent = 'The strings are anagrams.';
+      } else {
+        resultElement.textContent = 'The strings are not anagrams.';
+      }
+    }
+  </script>
+
+</body>
+</html>
