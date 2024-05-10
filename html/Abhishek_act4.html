@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity3</title>
+  <style>
+    /* Base styles for all buttons */
+    button {
+      padding: 18px 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    /* Individual button styles */
+    .change-text-button {
+      background-color: #4CAF50; /* Green */
+      color: white;
+    }
+
+    .toggle-image-button {
+      background-color: #2196F3; /* Blue */
+      color: white;
+    }
+
+    .change-background-button {
+      background-color: #ff9800; /* Orange */
+      color: white;
+    }
+
+    .create-element-button {
+      background-color: #f44336; /* Red */
+      color: white;
+    }
+
+    /* Add hover effects (optional) */
+    button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <p id="myParagraph">This is a paragraph.</p>
+  <img src="/rohit.jpg" id="myImage" width="300px" >
+  <button class="change-text-button" onclick="changeText()">Change Text</button>
+  <button class="toggle-image-button" onclick="toggleImage()">Show/Hide Image</button>
+  <button class="change-background-button" onclick="changeBackgroundColor()">Change Background Color</button>
+  <button class="create-element-button" id="addElementButton">Add New Element</button>
+
+  <script>
+    function changeText() {
+      const paragraph = document.querySelector("#myParagraph");
+      paragraph.textContent = "This is new text!";
+    }
+
+    function toggleImage() {
+      const image = document.querySelector("#myImage");
+      if (image.style.display === "none") {
+        image.style.display = "block";
+      } else {
+        image.style.display = "none";
+      }
+    }
+
+    function changeBackgroundColor() {
+      document.body.style.backgroundColor = "lightblue";
+    }
+
+    function createElement() {
+      const newElement = document.createElement("h2");
+      newElement.textContent = "This is a new heading!";
+      document.body.appendChild(newElement);
+    }
+
+    // Attach event listener to the "Add New Element" button
+    const addElementButton = document.getElementById("addElementButton");
+    addElementButton.addEventListener("click", createElement);
+  </script>
+</body>
+</html>

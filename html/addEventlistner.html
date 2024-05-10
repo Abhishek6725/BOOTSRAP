@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <input type="button" value="Hover" id="btn"/>
+    <script type ="text/javascript">
+    btn.addEventListener("mouseover", changeColorOnMouseOver);
+    btn.addEventListener("mouseout", changeColorOnMouseOut);
+
+    function changeColorOnMouseOver()
+    {
+        this.style.background='red';
+        this.style.color='yellow';
+    }
+    function changeColorOnMouseOut()
+    {
+        this.style.background='cadetblue';
+        this.style.color='white';
+    }
+
+</script>
+</html>

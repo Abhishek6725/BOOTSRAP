@@ -1,0 +1,37 @@
+<html>
+<head>
+    <style>
+        /* CSS code */
+        h1 {
+            color: blue;
+            font-family: Arial;
+        }
+
+        p {
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Website</h1>
+    <p id="demo">This is a paragraph.</p>
+    <button onclick="changeText()">Click Me</button>
+    <script>
+        // JavaScript code
+        function changeText() {
+            var x = document.getElementById("demo");
+            x.innerHTML = "You clicked the button!";
+            x.style.color = "green";
+            // Syntax error: missing semicolon
+            x.style.fontWeight = "bold"
+            // Reference error: y is not defined
+            console.log(y);
+            // Type error: x is not a function
+            x();
+            // Range error: invalid array length
+            var arr = new Array(-1);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Viewer</title>
+<style>
+  
+  .thumbnails-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .thumbnail {
+    width: 100px;
+    height: 100px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .full-image-container {
+    text-align: center;
+  }
+  .full-image {
+    max-width: 100%;
+    max-height: 400px;
+  
+</style>
+</head>
+<body>
+
+<div class="thumbnails-container">
+  <img class="thumbnail" src="download (2).jpg" alt="image1">
+  <img class="thumbnail" src="download (1).jpg" alt="image22">
+  <img class="thumbnail" src="rohit.jpg" alt="image3">
+</div>
+
+<div class="full-image-container">
+  <img class="full-image" src="download (1).jpg" alt="Full-size Image">
+</div>
+
+<script>
+e
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  const fullImage = document.querySelector('.full-image');
+
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', function() {
+     
+      fullImage.src = this.src;
+      
+    });
+  });
+</script>
+
+</body>
+</html>

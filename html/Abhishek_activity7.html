@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Manipulation</title>
+</head>
+<body>
+
+<script>
+  // Creating a JSON object with nested objects
+  const participants = {
+    "participant1": {
+      "name": "John Doe",
+      "age": 30,
+      "address": "123 Main St, Anytown",
+      "details": {
+        "email": "john@example.com",
+        "phone": "555-1234"
+      }
+    },
+    "participant2": {
+      "name": "Jane Smith",
+      "age": 25,
+      "address": "456 Elm St, Othertown",
+      "details": {
+        "email": "jane@example.com",
+        "phone": "555-5678"
+      }
+    }
+  };
+
+  // Convert JSON object to a string
+  const jsonString = JSON.stringify(participants);
+  console.log(jsonString);
+
+  // Convert stringified JSON object back to JavaScript object
+  const parsedObject = JSON.parse(jsonString);
+  console.log(parsedObject);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Header Example</title>
+  <!-- Linking to Bootstrap CSS via CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <!-- Website Title or Logo on the left -->
+    <a class="navbar-brand" href="#">
+      <img src="rohit.jpg" alt="Your Logo" width="80" height="auto">
+    </a>
+    
+    <!-- Dropdown Menu on the right -->
+    <div class="dropdown ml-auto">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Menu
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Menu Item 1</a>
+        <a class="dropdown-item" href="#">Menu Item 2</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content Section -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Main Content</h2>
+      <p>This is some dummy content to simulate a real-world scenario. You can add any content here according to your website's requirements.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet massa eget enim scelerisque finibus. Sed mattis magna non tortor volutpat, vitae fermentum neque vehicula.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Linking to Bootstrap JS and jQuery via CDN (required for Bootstrap dropdown functionality) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

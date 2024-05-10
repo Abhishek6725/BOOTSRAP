@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<style>
+    #myDIV{
+        margin-top: 10px;
+        height: 200px;
+        width: 200px;
+        overflow: auto;
+    }
+    #content {
+        height: 2000px;
+        width: 200px;
+        padding: 10px;
+        background-color: coral;
+    }
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The scrollHeight and scrollWidth Properties </h1>
+    <p id="'demo"></p>
+    <script>
+        const element = document.getElementById("content");
+        let y= element.scrollHeight;
+        let x=element.scrollWidth;
+        document.getElementById("demo").innerHTML ="Height: " + y + "Width: " + x;
+    </script>
+    
+</body>
+</html>

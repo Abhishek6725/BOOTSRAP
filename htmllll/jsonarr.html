@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON Arrays Example</title>
+</head>
+<body>
+  <h1>JSON Arrays Example</h1>
+
+  <p id="output"></p>
+
+  <script>
+    // Define a JSON array
+    var fruits = ["Apple", "Banana", "Orange", "Mango"];
+
+    // Convert the JSON array to a string
+    var fruitsString = JSON.stringify(fruits);
+
+    // Display the JSON array and its string representation
+    document.getElementById("output").innerHTML = "JSON Array: " + fruits + "<br>";
+    document.getElementById("output").innerHTML += "JSON Array as String: " + fruitsString + "<br>";
+
+    // Parse the JSON array string back to an array
+    var parsedFruits = JSON.parse(fruitsString);
+
+    // Display the parsed array
+    document.getElementById("output").innerHTML += "Parsed Array: " + parsedFruits;
+  </script>
+</body>
+</html>

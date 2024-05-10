@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming HTML DOM with JavaScript</title>
+</head>
+<body>
+  <h1 id="heading">Welcome to the HTML DOM Example</h1>
+  <p id="paragraph">This is a paragraph.</p>
+  <button onclick="changeHeading()">Change Heading</button>
+  <button onclick="changeParagraph()">Change Paragraph</button>
+
+  <script>
+    function changeHeading() {
+      var heading = document.getElementById("heading");
+      heading.innerHTML = "The heading has been changed!";
+    }
+
+    function changeParagraph() {
+      var paragraph = document.getElementById("paragraph");
+      paragraph.innerHTML = "The paragraph has been changed.";
+    }
+  </script>
+</body>
+</html>

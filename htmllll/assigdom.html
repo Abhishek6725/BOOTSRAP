@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assigning Event Handlers in JavaScript using DOM Object Property</title>
+</head>
+<body>
+  <h1 id="heading">Welcome to the Event Handler Example</h1>
+  <p id="paragraph">This is a paragraph.</p>
+  <button id="button">Click Me!</button>
+
+  <script>
+    var heading = document.getElementById("heading");
+    var paragraph = document.getElementById("paragraph");
+    var button = document.getElementById("button");
+
+    heading.addEventListener("click", function() {
+      heading.innerHTML = "The heading has been clicked!";
+    });
+
+    paragraph.addEventListener("click", function() {
+      paragraph.innerHTML = "The paragraph has been clicked.";
+    });
+
+    button.addEventListener("click", function() {
+      button.innerHTML = "The button has been clicked.";
+    });
+  </script>
+</body>
+</html>

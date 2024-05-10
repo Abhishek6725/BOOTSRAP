@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using addEventListener and removeEventListener</title>
+</head>
+<body>
+  <button id="button">Click Me!</button>
+
+  <script>
+    var button = document.getElementById("button");
+
+    function clickHandler() {
+      console.log("Button clicked!");
+    }
+
+    // Adding an event listener
+    button.addEventListener("click", clickHandler);
+
+    // Removing the event listener after 3 seconds
+    setTimeout(function() {
+      button.removeEventListener("click", clickHandler);
+      console.log("Event listener removed after 3 seconds.");
+    }, 3000);
+  </script>
+</body>
+</html>

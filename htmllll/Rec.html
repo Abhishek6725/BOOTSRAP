@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recursive Function in JavaScript</title>
+</head>
+<body>
+  <p id="result"></p>
+
+  <script>
+    function countdown(num) {
+      if (num === 0) {
+        document.getElementById("result").innerHTML += "Liftoff!";
+      } else {
+        document.getElementById("result").innerHTML += num + ", ";
+        countdown(num - 1); // Recursive call
+      }
+    }
+
+    countdown(5); // Start the countdown from 5
+  </script>
+</body>
+</html>

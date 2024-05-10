@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CDN Odyssey</title>
+  <!-- CDN jQuery Link -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <style>
+    .clickable {
+      cursor: pointer;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CDN Odyssey</h1>
+
+  <!-- Task 1: Select and Modify Elements -->
+  <div class="change-text">Original Text</div>
+  <img class="modify-attribute" src="download (1).jpg" alt="Original Image">
+  <button class="clickable">Click me!</button>
+
+  <!-- Task 2: Update HTML with JSON Data -->
+  <div id="json-display"></div>
+  <input type="text" id="json-input" placeholder="Enter property name">
+
+  <!-- Task 3: Replace Local Query File with CDN Link -->
+  <script>
+    $('.change-text').text('New Text');
+    $('.modify-attribute').attr('src', '19276.jpg');
+    $('.clickable').click(function () {
+      $(this).css('color', 'red');
+    });
+
+    const jsonData = {
+      users: [
+        { name: 'This', age: 25 },
+        { name: 'That', age: 30 }
+      ]
+    };
+
+    function displayJSON() {
+      $('#json-display').empty();
+      jsonData.users.forEach(user => {
+        $('#json-display').append(<p>${user.name}, ${user.age} years old</p>);
+      });
+    }
+
+    displayJSON();
+
+    $('#json-input').on('input', function () {
+      const property = $(this).val();
+      const filteredData = jsonData.users.map(user => user[property]);
+      $('#json-display').html(<p>${filteredData.join(', ')}</p>);
+      console.log(property);
+      
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bootstrap 4 display Heading</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+    .example{
+        margin: 100px;
+    }
+</style>
+</head>
+<body>
+<div class="example">
+<h1 class="display-1">display Heading 1</h1>
+<h1 class="display-2">display Heading 2</h1>
+<h1 class="display-3">display Heading 3</h1>
+<h1 class="display-4">display Heading 4</h1>
+</div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        #booking-form {
+            margin-bottom: 2rem;
+        }
+
+        form {
+            display: grid;
+            gap: 1rem;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hotel Booking</h1>
+    </header>
+    <main>
+        <section id="booking-form">
+            <h2>Book Your Stay</h2>
+            <form id="booking-details">
+                <label for="check-in-date">Check-in Date:</label>
+                <input type="date" id="check-in-date" required>
+                <label for="check-out-date">Check-out Date:</label>
+                <input type="date" id="check-out-date" required>
+                <label for="num-guests">Number of Guests:</label>
+                <input type="number" id="num-guests" min="1" required>
+                <button type="submit">Check Availability</button>
+            </form>
+        </section>
+        <section id="availability">
+            <!-- Availability details will be shown here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Hotel Booking</p>
+    </footer>
+    <script>
+        // JavaScript code for handling form submission and availability check
+        document.getElementById('booking-details').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            // Retrieve form data
+            const checkInDate = document.getElementById('check-in-date').value;
+            const checkOutDate = document.getElementById('check-out-date').value;
+            const numGuests = document.getElementById('num-guests').value;
+            
+            // You can implement availability check here and update the UI accordingly
+            const availabilitySection = document.getElementById('availability');
+            availabilitySection.innerHTML = `
+                <h2>Availability</h2>
+                <p>Check-in Date: ${checkInDate}</p>
+                <p>Check-out Date: ${checkOutDate}</p>
+                <p>Number of Guests: ${numGuests}</p>
+                <p>Available Rooms: 5</p>
+                <!-- Add more availability details as needed -->
+            `;
+        });
+    </script>
+</body>
+</html>
